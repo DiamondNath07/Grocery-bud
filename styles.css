@@ -35,13 +35,20 @@ main {
 
 .grocery-form {
   position: relative;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .grocery-item {
   padding: 8px;
   width: 80%;
+  margin: 0 auto;
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 5px #1b74e4;
+  outline: none;
 }
 
 .submit-btn {
@@ -51,8 +58,37 @@ main {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   position: absolute;
-  left: 67%;
+  left: 77.5%;
   outline: none;
   border: none;
-  top: 2px;
+  top: 0px;
+  border-radius: 0 10px 10px 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #65a5f3;
+}
+
+.grocery-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn,
+.close-btn {
+  color: #1b74e4;
+  background-color: transparent;
+  border: none;
+}
+
+.close-btn {
+  color: red;
+}
+
+.clear-list {
+  text-align: center;
+  color: red;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
 }
