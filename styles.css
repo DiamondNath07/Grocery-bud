@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+main {
+  width: 100%;
+
+  margin-top: 200px;
+}
+
+.grocery-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 5px #c9c6c6;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.grocery-title {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1b74e4;
+  font-size: 22px;
+  line-height: 42px;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.grocery-form {
+  position: relative;
+}
+
+.grocery-item {
+  padding: 8px;
+  width: 80%;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.submit-btn {
+  padding: 8px 10px;
+  font-size: 16px;
+  background-color: #1b74e4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  position: absolute;
+  left: 67%;
+  outline: none;
+  border: none;
+  top: 2px;
+}
