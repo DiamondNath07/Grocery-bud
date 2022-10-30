@@ -14,13 +14,39 @@ main {
   margin-top: 200px;
 }
 
-.grocery-container {
+.grocery-wrapper {
   max-width: 600px;
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0 0 5px #c9c6c6;
   padding: 20px;
   border-radius: 5px;
+  
+}
+
+.alert {
+  width: 60%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 0;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+  display: none;
+}
+
+.alert-danger {
+  display: block;
+  background-color: rgba(231, 7, 7, 0.527);
+  color: rgb(114, 4, 4);
+}
+
+.alert-success {
+  display: block;
+  background-color: rgb(129, 218, 129);
+  color: rgb(3, 97, 3);
 }
 
 .grocery-title {
@@ -70,9 +96,37 @@ main {
   background-color: #65a5f3;
 }
 
-.grocery-list {
+.grocery-container {
+  text-align: center;
+  visibility: hidden;
+}
+
+.show-container {
+  visibility: visible;
+}
+
+/* .grocery-list {
+  display: none;
+} */
+
+/* .show-grocery-list {
+  display: block;
+} */
+
+.listed-item {
   display: flex;
   justify-content: space-between;
+  margin: 0 20px;
+  margin-bottom: 30px;
+}
+
+.selected-item {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b74e4;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
 }
 
 .edit-btn,
@@ -91,4 +145,6 @@ main {
   color: red;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 2px;
+  background-color: transparent;
+  border: none;
 }

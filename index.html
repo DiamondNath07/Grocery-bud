@@ -16,25 +16,30 @@
   </head>
   <body>
     <main>
-      <article class="grocery-container">
+      <article class="grocery-wrapper">
+        <p class="alert"></p>
         <h2 class="grocery-title">Grocery Budd</h2>
         <form class="grocery-form">
           <input type="text" class="grocery-item" placeholder="e.g Milk" />
-          <button class="submit-btn">Submit</button>
+          <button type="submit" class="submit-btn">Submit</button>
         </form>
-        <div class="grocery-list">
-          <p class="selected-item"></p>
+        <div class="grocery-container">
+         <div class="grocery-list">
+          <article class="listed-item">
+            <p class="selected-item">item</p>
 
-          <span class="list-btns">
-            <button class="edit-btn ">
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button class="close-btn"><i class="fa-solid fa-trash"></i></button>
-          </span>
+            <span class="list-btns">
+              <button class="edit-btn">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="close-btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </span>
+          </article>
         </div>
-        <p class="clear-list">
-         clear items
-        </p>
+        <button class="clear-list">clear items</button>
+        </div>
       </article>
     </main>
 
