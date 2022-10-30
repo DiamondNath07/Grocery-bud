@@ -14,6 +14,7 @@ let editID = '';
 // add event listeners
 
 form.addEventListener('submit', addItem);
+clearBtn.addEventListener('click', clearItem);
 
 // functions
 
@@ -42,12 +43,19 @@ function addItem(e) {
     list.appendChild(element);
     displayAlert('item added to the list', 'success');
     container.classList.add('show-container');
+
+    // add toLocalStorage
+    addToLocalStorage(id, value);
+    // set back to default
+    setBacktoDefault();
   } else if (!value == '' && editFlag === true) {
     console.log('edit item');
   } else {
     displayAlert('please enter value', 'danger');
   }
 }
+
+// functions
 
 function displayAlert(text, action) {
   alert.textContent = text;
@@ -56,4 +64,29 @@ function displayAlert(text, action) {
     alert.textContent = '';
     alert.classList.remove(`alert-${action}`);
   }, 1000);
+}
+
+// clearItems function
+function clearItem() {
+  const items = document.querySelectorAll('.listed-item');
+
+  if (items.length > 0) {
+    items.forEach((item) => {
+      list.removeChild(item);
+    });
+  }
+  container.classList.remove('show-container')
+}
+
+// set back to default
+function setBacktoDefault() {
+  groceryItem.value = '';
+  editFlag = false;
+  editID = '';
+  submitBtn.textContent = 'Submit';
+}
+
+// LocalStorage
+function addToLocalStorage(id, value) {
+  console.log('added to local storage');
 }

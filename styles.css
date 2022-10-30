@@ -9,10 +9,7 @@ body {
 }
 
 main {
-  width: 100%;
-
-/* margin: 200px 10px 0 10px; */
-  margin-top: 200px;
+  margin: 200px 10px 0 10px;
 }
 
 .grocery-wrapper {
@@ -119,7 +116,7 @@ main {
   display: flex;
   justify-content: space-between;
   margin: 0 20px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .selected-item {
