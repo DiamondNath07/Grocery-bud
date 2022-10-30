@@ -22,7 +22,26 @@ function addItem(e) {
   const value = groceryItem.value;
   const id = new Date().getTime().toString();
   if (!value == '' && editFlag === false) {
-    console.log('add to list');
+    const element = document.createElement('article');
+    element.classList.add('listed-item');
+    const attr = document.createAttribute('data-id');
+    attr.value = id;
+    element.setAttributeNode(attr);
+    element.innerHTML = `
+                <p class="selected-item">${value}</p>
+
+            <span class="list-btns">
+              <button class="edit-btn">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="close-btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </span>
+    `;
+    list.appendChild(element);
+    displayAlert('item added to the list', 'success');
+    container.classList.add('show-container');
   } else if (!value == '' && editFlag === true) {
     console.log('edit item');
   } else {

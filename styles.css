@@ -11,6 +11,7 @@ body {
 main {
   width: 100%;
 
+/* margin: 200px 10px 0 10px; */
   margin-top: 200px;
 }
 
@@ -45,7 +46,7 @@ main {
 
 .alert-success {
   display: block;
-  background-color: rgb(129, 218, 129);
+  background-color: rgb(195, 235, 195);
   color: rgb(3, 97, 3);
 }
 
@@ -148,4 +149,11 @@ main {
   letter-spacing: 2px;
   background-color: transparent;
   border: none;
+}
+@media screen and (min-width: 768px) {
+  .alert {
+    max-width: 40%;
+    margin: 0 auto;
+    left: 415px;
+  }
 }
