@@ -40,6 +40,13 @@ function addItem(e) {
               </button>
             </span>
     `;
+    const deleteBtn = element.querySelector('.close-btn');
+    const editBtn = element.querySelector('.edit-btn');
+
+    deleteBtn.addEventListener('click', deleteItem);
+    editBtn.addEventListener('click', editItem);
+
+    // appendchild
     list.appendChild(element);
     displayAlert('item added to the list', 'success');
     container.classList.add('show-container');
@@ -75,7 +82,24 @@ function clearItem() {
       list.removeChild(item);
     });
   }
-  container.classList.remove('show-container')
+  container.classList.remove('show-container');
+  displayAlert('empty list', 'danger');
+  setBacktoDefault();
+}
+
+function deleteItem(e) {
+  const element = e.currentTarget.parentElement.parentElement;
+  list.removeChild(element);
+  displayAlert('item deleted', 'success');
+
+  if (list.children.length === 0) {
+    container.classList.remove('show-container');
+  }
+  setBacktoDefault();
+  removeFromLocalStorage(id)
+}
+function editItem() {
+  console.log('edit item');
 }
 
 // set back to default
@@ -89,4 +113,9 @@ function setBacktoDefault() {
 // LocalStorage
 function addToLocalStorage(id, value) {
   console.log('added to local storage');
+}
+
+// remove from local storage
+function removeFromLocalStorage(id){
+ 
 }
